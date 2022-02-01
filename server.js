@@ -2,7 +2,7 @@ const express = require('express')
 const fs = require('fs')
 const path = require('path')
 const app = express()
-const port = 3000
+const PORT = process.env.PORT || 3000;
 const { v4: uuidv4 } = require('uuid');
 
 app.use(express.static('public'))
@@ -42,21 +42,13 @@ app.post('/api/notes', (req, res) =>{
         })
     }) 
     
+    app.delete('api/notes/:id', (req, res) => {
+        res.send
+    })
     //write json file with updated data
     // send response back with new note 
     
 })
-
-
-
-
-
-
-
-
-
-
-
 
 
 
